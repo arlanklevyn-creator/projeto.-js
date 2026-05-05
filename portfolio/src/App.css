@@ -182,3 +182,30 @@
     border-right-color: var(--border);
   }
 }
+
+nav {
+  background: var(--bg);
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: var(--accent-bg);
+}
