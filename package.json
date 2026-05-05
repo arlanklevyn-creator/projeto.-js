@@ -1,14 +1,10 @@
 {
   "scripts": {
-  "dev": "...",
-  "start": "...",
-  "build": "..."
-}
-
-
-
-
-  "dependencies": {
+    "dev": "...",
+    "start": "...",
+    "build": "..."
+ },
+ "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
     "framer-motion": "^12.38.0",
     "react-router-dom": "^7.14.2",
