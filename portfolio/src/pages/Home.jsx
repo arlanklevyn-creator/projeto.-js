@@ -1,38 +1,55 @@
-import heroImg from '../assets/hero.png'
+import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
+import heroImg from '../assets/hero.png'
 
 function Home() {
+  const [count, setCount] = useState(0)
+
   return (
-    <section id="home" className="home">
+    <>
+      <section id="center">
+        <div className="hero">
+          <img
+            src={heroImg}
+            className="base"
+            width="170"
+            height="179"
+            alt="Imagem principal"
+          />
 
-      <div className="hero">
-        <img src={heroImg} className="base" alt="Imagem principal" />
-        <img src={reactLogo} className="framework" alt="React logo" />
-        <img src={viteLogo} className="vite" alt="Vite logo" />
-      </div>
+          <img
+            src={reactLogo}
+            className="framework"
+            alt="React logo"
+          />
 
-      <div className="content">
-        <h1>Olá, eu sou Arlan 👋</h1>
-
-        <h2>Desenvolvedor Front-end</h2>
-
-        <p>
-          Crio interfaces modernas, responsivas e focadas na melhor experiência
-          do usuário utilizando tecnologias como React e JavaScript.
-        </p>
-
-        <div className="buttons">
-          <a href="#about" className="btn">
-            Sobre mim
-          </a>
-
-          <a href="#projects" className="btn secondary">
-            Ver projetos
-          </a>
+          <img
+            src={viteLogo}
+            className="vite"
+            alt="Vite logo"
+          />
         </div>
-      </div>
 
-    </section>
+        <div>
+          <h1>Meu Portfólio</h1>
+          <p>
+            Bem-vindo ao meu portfólio! Aqui você encontra meus projetos e habilidades.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+        >
+          Count is {count}
+        </button>
+      </section>
+    </>
   )
 }
+
+export default Home 
+
+
