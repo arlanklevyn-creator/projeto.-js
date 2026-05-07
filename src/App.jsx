@@ -51,7 +51,7 @@ const styles = `
     padding: 48px 24px;
   }
 
-  /* ── HEADERR ── */
+  /* ── HEADER ── */
   .cv-header {
     display: flex;
     align-items: flex-start;
@@ -473,10 +473,10 @@ export default function App() {
 
           {/* ── HEADER ── */}
           <header className="cv-header">
-            <div className="cv-avatar">JS</div>
+            <div className="cv-avatar">AK</div>
             <div className="cv-header-info">
               <div className="cv-tag">Disponível para oportunidades</div>
-              <h1 className="cv-name">João Silva</h1>
+              <h1 className="cv-name">Arlan Kelvyn</h1>
               <p className="cv-role">Desenvolvedor Full Stack &amp; Engenheiro de Software</p>
               <div className="cv-location">
                 <MapPinIcon />
@@ -495,7 +495,7 @@ export default function App() {
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/seuusuario"
+                  href="https://github.com/arlanklevyn-creator"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-btn social-github"
@@ -508,7 +508,7 @@ export default function App() {
                   className="social-btn social-email"
                 >
                   <EmailIcon />
-                  joao.silva@email.com
+                  arlanklevyn@email.com
                 </a>
               </div>
             </div>
@@ -524,7 +524,7 @@ export default function App() {
               <div className="cv-card">
                 <h2 className="section-title">Sobre Mim</h2>
                 <p className="about-text">
-                  Desenvolvedor Full Stack com <strong>5+ anos de experiência</strong> criando
+                  Estudante de computação com <strong>5+ anos de experiência</strong> criando
                   aplicações web robustas e escaláveis. Especializado em <strong>React, Node.js
                   e arquitetura cloud</strong>. Apaixonado por código limpo, boas práticas e
                   entrega de valor real ao usuário final.
@@ -630,8 +630,8 @@ export default function App() {
                 <h2 className="section-title">Idiomas</h2>
                 {[
                   { lang: 'Português', level: 'Nativo' },
-                  { lang: 'Inglês', level: 'Avançado' },
-                  { lang: 'Espanhol', level: 'Básico' },
+                  { lang: 'Inglês', level: 'basico' },
+                  { lang: 'Espanhol', level: 'basico' },
                 ].map(({ lang, level }) => (
                   <div key={lang} className="lang-item">
                     <span className="lang-name">{lang}</span>
