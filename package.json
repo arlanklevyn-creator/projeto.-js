@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "dev": "...",
-    "start": "...",
-    "build": "..."
- },
- "dependencies": {
+    "dev": "cd portfolio && npm run dev",
+    "start": "cd portfolio && npm run dev",
+    "build": "cd portfolio && npm run build"
+  },
+  "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
     "framer-motion": "^12.38.0",
     "react-router-dom": "^7.14.2",
