@@ -53,7 +53,7 @@ const styles = `
     padding: 48px 24px;
   }
 
-  /* ── HEADER ── */
+  /* ── HEADERR ── */
   .cv-header {
     display: flex;
     align-items: flex-start;
