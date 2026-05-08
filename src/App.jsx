@@ -12,7 +12,7 @@ const styles = `
     --blue-glow: #60a5fa;
     --blue-dim: #1d4ed8;
     --text: #f1f5f9;
-    --text-muted: #94a3b8;
+    --text-muted: #fdfdfd;
     --border: #1e2d45;
     --accent: #0ea5e9;
   }
@@ -97,9 +97,22 @@ const styles = `
     flex-shrink: 0;
     border: 2px solid rgba(96,165,250,0.3);
     box-shadow: 0 0 32px rgba(37,99,235,0.3);
+    overflow: hidden;
   }
 
-  .cv-header-info { flex: 1; }
+  .cv-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cv-header-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
 
   .cv-tag {
     display: inline-block;
@@ -473,15 +486,16 @@ export default function App() {
 
           {/* ── HEADER ── */}
           <header className="cv-header">
-            <div className="cv-avatar">AK</div>
+            <div className="cv-avatar">
+              <img
+                src="https://avatars.githubusercontent.com/u/277013134?v=4"
+                alt="Foto de Arlan Kelvyn"
+              />
+            </div>
+
             <div className="cv-header-info">
               <div className="cv-tag">Disponível para oportunidades</div>
               <h1 className="cv-name">Arlan Kelvyn</h1>
-              <p className="cv-role">Desenvolvedor Full Stack &amp; Engenheiro de Software</p>
-              <div className="cv-location">
-                <MapPinIcon />
-                São Paulo, Brasil
-              </div>
 
               {/* SOCIAL LINKS */}
               <div className="cv-socials">
@@ -511,6 +525,12 @@ export default function App() {
                   arlanklevyn@email.com
                 </a>
               </div>
+
+              <p className="cv-role">Programador de software &amp; técnico em manutenção de computadores</p>
+              <div className="cv-location">
+                <MapPinIcon />
+                Patos- PB, Brasil
+              </div>
             </div>
           </header>
 
@@ -524,7 +544,7 @@ export default function App() {
               <div className="cv-card">
                 <h2 className="section-title">Sobre Mim</h2>
                 <p className="about-text">
-                  Estudante de computação com <strong>5+ anos de experiência</strong> criando
+                  Estudante de computação com <strong>com + de 1 ano de experiência</strong> criando
                   aplicações web robustas e escaláveis. Especializado em <strong>React, Node.js
                   e arquitetura cloud</strong>. Apaixonado por código limpo, boas práticas e
                   entrega de valor real ao usuário final.
@@ -537,37 +557,39 @@ export default function App() {
 
                 <div className="exp-item">
                   <div className="exp-header">
-                    <span className="exp-company">TechCorp Brasil</span>
-                    <span className="exp-period">2022 — Atual</span>
+                    <span className="exp-company">ZELO- Serviço de locaçao de mao de obra</span>
+                    <span className="exp-period">inicio em 2022 — Atual</span>
                   </div>
-                  <div className="exp-role">Senior Frontend Developer</div>
+                  <div className="exp-role">A. S. G.</div>
                   <p className="exp-desc">
-                    Liderou o redesign completo do dashboard principal, reduzindo o tempo de
-                    carregamento em 60%. Mentoria de equipe de 4 desenvolvedores juniores.
+                    desenvolve atividades de suporte na area de limpeza, garantimdo 
+                    um bom abiente de trabalho e satisfação dos pacientes, realizando a 
+                    limpeza de áreas comuns, e banheiros, 
+                    seguindo protocolos de higiene e segurança para prevenir infecções.
                   </p>
                 </div>
 
                 <div className="exp-item">
                   <div className="exp-header">
-                    <span className="exp-company">Startup XYZ</span>
-                    <span className="exp-period">2020 — 2022</span>
+                    <span className="exp-company">GUEDES SUPERMERCADO</span>
+                    <span className="exp-period">2014 — 2022</span>
                   </div>
-                  <div className="exp-role">Full Stack Developer</div>
+                  <div className="exp-role">Operador de Caixa</div>
                   <p className="exp-desc">
-                    Desenvolvimento de APIs REST com Node.js e integrações com sistemas de
-                    pagamento. Implementação de CI/CD com GitHub Actions e AWS.
+                    Atendimento ao cliente, processamento de transações, controle de caixa e organização
+                    do ambiente de trabalho, garantindo uma experiência de compra eficiente e agradável,
+                    sempre prezando pela satisfação do cliente e contribuindo para o bom funcionamento do supermercado.
                   </p>
                 </div>
 
                 <div className="exp-item">
                   <div className="exp-header">
-                    <span className="exp-company">Agência Digital</span>
-                    <span className="exp-period">2019 — 2020</span>
+                    <span className="exp-company">GRANJA- ASA BRANCA</span>
+                    <span className="exp-period">2013</span>
                   </div>
-                  <div className="exp-role">Frontend Developer</div>
+                  <div className="exp-role">AUXILIAR DE PRODUÇÃO</div>
                   <p className="exp-desc">
-                    Criação de interfaces responsivas para clientes de e-commerce utilizando
-                    React e styled-components.
+                    Responsável por auxiliar nas atividades de produção, garantindo a eficiência e qualidade.
                   </p>
                 </div>
               </div>
@@ -579,7 +601,7 @@ export default function App() {
                 <div className="skill-group">
                   <div className="skill-group-title">Frontend</div>
                   <div className="skill-tags">
-                    {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux', 'GraphQL'].map(s => (
+                    {['React', 'TypeScript', 'Next.js', 'Tailwind CSS',].map(s => (
                       <span key={s} className="skill-tag">{s}</span>
                     ))}
                   </div>
@@ -588,7 +610,7 @@ export default function App() {
                 <div className="skill-group">
                   <div className="skill-group-title">Backend</div>
                   <div className="skill-tags">
-                    {['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs', 'Docker'].map(s => (
+                    {['Node.js', 'PostgreSQL', 'REST APIs'].map(s => (
                       <span key={s} className="skill-tag">{s}</span>
                     ))}
                   </div>
@@ -597,7 +619,7 @@ export default function App() {
                 <div className="skill-group">
                   <div className="skill-group-title">Cloud &amp; DevOps</div>
                   <div className="skill-tags">
-                    {['AWS', 'GitHub Actions', 'Vercel', 'Linux', 'Nginx'].map(s => (
+                    {[         'GitHub Actions'    ].map(s => (
                       <span key={s} className="skill-tag">{s}</span>
                     ))}
                   </div>
@@ -613,25 +635,30 @@ export default function App() {
                 <h2 className="section-title">Educação</h2>
 
                 <div className="edu-item">
-                  <div className="edu-degree">Eng. de Software</div>
-                  <div className="edu-school">USP — São Paulo</div>
-                  <div className="edu-year">2015 — 2019</div>
+                  <div className="edu-degree">Administração - PROJOVEM TRABALHADOR </div>
+                  <div className="edu-school">ESCOLAS PROFISSIONALIZANTES -Patos-PB</div>
+                  <div className="edu-year">2011 — 2012</div>
                 </div>
 
                 <div className="edu-item">
-                  <div className="edu-degree">MBA em Gestão de TI</div>
-                  <div className="edu-school">FGV Online</div>
-                  <div className="edu-year">2021 — 2022</div>
+                  <div className="edu-degree">INT A MONTAGEM E MANUTENÇÃO DE COMPUTADORES</div>
+                  <div className="edu-school">FAC. INT de PATOS - FIP </div>
+                  <div className="edu-year">2015</div>
                 </div>
               </div>
+
+              <div className="edu-item">
+                  <div className="edu-degree">ENS- MEDIO COMPLETO </div>
+                  <div className="edu-school">COLEGIO E CURSO SANTO EXPEDITO </div>
+                  <div className="edu-local">Patos-PB</div>
+                </div>
 
               {/* LANGUAGES */}
               <div className="cv-card">
                 <h2 className="section-title">Idiomas</h2>
                 {[
                   { lang: 'Português', level: 'Nativo' },
-                  { lang: 'Inglês', level: 'basico' },
-                  { lang: 'Espanhol', level: 'basico' },
+                  { lang: 'Inglês', level: 'Basico' },
                 ].map(({ lang, level }) => (
                   <div key={lang} className="lang-item">
                     <span className="lang-name">{lang}</span>
@@ -644,9 +671,9 @@ export default function App() {
               <div className="cv-card">
                 <h2 className="section-title">Certificações</h2>
                 {[
-                  { name: 'AWS Solutions Architect', issuer: 'Amazon, 2023' },
-                  { name: 'React Developer Certification', issuer: 'Meta, 2022' },
-                  { name: 'Scrum Master (CSM)', issuer: 'Scrum Alliance, 2021' },
+                  { name: 'ADMINISTRAÇAO', issuer: 'PRO-JOVEM TRABALHADOR, 2012' },
+                  { name: 'MONTAGEM E MANUTENÇÃO DE COMPUTADORES', issuer: 'FIP, 2015' },
+                  { name: 'Programador de Software', issuer: 'Senac, 2026' },
                 ].map(({ name, issuer }) => (
                   <div key={name} className="cert-item">
                     <div className="cert-dot" />
