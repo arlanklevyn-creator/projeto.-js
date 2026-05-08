@@ -342,9 +342,9 @@ video {
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     
-    --text: #6b6375;
-    --text-h: #08060d;
-    --bg: #fff;
+    --text: white;
+    --text-h: white;
+    --bg: white;
     --border-color: #e5e4e7;
     --code-bg: #f4f3ec;
     --accent-purple: #aa3bff;
@@ -373,7 +373,7 @@ video {
   }
 }@media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    --text: #d6d9df;
     --text-h: #f3f4f6;
     --bg: #16171d;
     --border-color: #2e303a;
