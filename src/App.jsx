@@ -544,9 +544,11 @@ export default function App() {
               <div className="cv-card">
                 <h2 className="section-title">Sobre Mim</h2>
                 <p className="about-text">
-                  Estudante de computação com <strong>com + de 1 ano de experiência</strong> criando
-                  aplicações web robustas e escaláveis. Especializado em <strong>React, Node.js
-                  e arquitetura cloud</strong>. Apaixonado por código limpo, boas práticas e
+                  Estudante de computação com <strong>com + de 1 ano de experiência</strong> criando 
+                  softwares e prestando suporte técnico em manutenção de computadores,
+                  Especializado em <strong> CSS, Node.js, e
+                  PostgreSQL
+                </strong>. Apaixonado por código limpo, boas práticas e
                   entrega de valor real ao usuário final.
                 </p>
               </div>
