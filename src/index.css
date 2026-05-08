@@ -25,8 +25,8 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     
-    --text: #f7f2fd;
-    --text-h: #efeef3f6;
+    --text: white;
+    --text-h: white;
     --bg: #fff;
     --border-color: #e5e4e7;
     --code-bg: #f4f3ec;
